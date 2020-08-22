@@ -9,14 +9,33 @@ var exibeMensagem = function() {
 
     idade = 16;
     console.log(idade);
-    /*if(true) { 
+}
+
+exibeMensagem2 = () => {
+    if(true) { 
         var escopoFuncao = 'Caelum'; 
         let escopoBloco = 'Alura';
 
        console.log(escopoBloco); // Alura 
    } 
    console.log(escopoFuncao); // Caelum 
-   console.log(escopoBloco); */
+
+   // WILL THROW AN ERROR BECAUSE escopoBloco IS NOT IN THIS SCOPE
+   console.log(escopoBloco);
 }
 
+showMessage3 = () => {
+    var a;
+
+    var steps = [1, 5, 10, 15];
+    steps.forEach(element => {
+        a = 12;
+        console.log(a);
+    });
+
+    console.log(a);
+}
+
+showMessage3();
 exibeMensagem();
+exibeMensagem2();
